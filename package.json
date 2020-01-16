@@ -2,7 +2,7 @@
 	"name": "ejs-vue",
 	"displayName": "EJS Vue",
 	"description": "Provide vue syntax within ejs files",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"license": "MIT",
 	"icon": "asset/vue.png",
 	"keywords": [
