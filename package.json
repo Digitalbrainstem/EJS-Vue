@@ -1,0 +1,52 @@
+{
+	"name": "ejs-vue",
+	"displayName": "EJS Vue",
+	"description": "Provide vue syntax within ejs files",
+	"version": "0.1.0",
+	"license": "MIT",
+	"icon": "asset/vue.png",
+	"keywords": [
+		"javascript",
+		"Vue",
+		"vue",
+		"vuejs",
+		"ejs"
+	],
+	"publisher": "DigitalBrainstem",
+	"author": {
+		"name": "Derek Thomas",
+		"email": "Derek@digitalbrainstem.com"
+	},
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"extensionDependencies": [
+		"octref.vetur"
+	],
+	"categories": [
+		"Languages"
+	],
+	"contributes": {
+		"grammars": [
+			{
+				"scopeName": "source.ejs.vue",
+				"path": "./syntaxes/ejs-vue.json",
+				"injectTo": [
+					"text.html"
+				],
+				"embeddedLanguages": {
+					"meta.embedded.block.vue": "vue-html",
+					"text.html.basic": "html"
+				}
+			}
+		]
+    },
+    "bugs": {
+		"url": "https://github.com/Digitalbrainstem/EJS-Vue/issues",
+		"email": "help@digitalbrainstem.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Digitalbrainstem/EJS-Vue.git"
+	}
+}

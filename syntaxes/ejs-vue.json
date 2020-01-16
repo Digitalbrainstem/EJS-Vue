@@ -1,0 +1,92 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "source.ejs.vue",
+	"name": "EJS Vue",
+	"injectionSelector": "L:text.html",
+	"patterns": [
+		
+		{
+			"include": "#vue-tag-double-quote"
+		},
+		{
+			"include": "#vue-tag-single-quote"
+		},
+		{
+			"include": "#vue-tag"
+		}
+
+	],
+	"repository": {
+		"vue-tag-double-quote":{
+			"begin":"\\s+(((v-)|(:)|(@))(.+))=(\")",
+			"beginCaptures": {
+				"1":{
+					"name":"vue-html"
+				},
+				"7":{
+					"name":"punctuation.definition.string.begin.html"
+				}
+			},
+			"end": "(\")",
+			"endCaptures": {
+				"1":{
+					"name":"punctuation.definition.string.end.html"
+				}
+			},
+			"contentName": "source.js",
+			"patterns": [
+				{
+					"include": "source.js"
+				}
+			]
+
+		},
+		"vue-tag-single-quote":{
+			"begin":"\\s+(((v-)|(:)|(@))(.+))=(')",
+			"beginCaptures": {
+				"1":{
+					"name":"vue-html"
+				},
+				"7":{
+					"name":"punctuation.definition.string.begin.html"
+				}
+			},
+			"end": "(')",
+			"endCaptures": {
+				"1":{
+					"name":"punctuation.definition.string.end.html"
+				}
+			},
+			"contentName": "source.js",
+			"patterns": [
+				{
+					"include": "source.js"
+				}
+			]
+
+		},
+		"vue-tag":{
+			"begin":"({{)",
+			"beginCaptures": {
+				"1":{
+					"name":"punctuation.definition.tag.begin.vue"
+				}
+			},
+			"end": "(}})",
+			"endCaptures": {
+				"1":{
+					"name":"punctuation.definition.tag.begin.vue"
+				}
+			},
+			"contentName":"source.js",
+			"name": "vue-html",
+			"patterns": [
+				{
+					"include": "source.js"
+				}
+			]
+
+		}
+	}
+	
+}
